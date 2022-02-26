@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHS</title>
+	<base href="/">
+    <link rel="icon" 
+    type="image/svg" 
+    href="images/icon.svg">
+	<link  href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	</head>
+<body data-offset="100" data-spy="scroll" data-target=".navbar">
+  <nav class="navbar shadow-sm navbar-expand-lg navbar-light fixed-top text-white bg-white  px-4" id="mynav" style=" position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  ">
+  <div class="container-fluid mx-auto" style="max-width: 1350px;">
+    <a class="navbar-brand d-none d-sm-block " href="#"  style="margin-right:3rem!important;""><img src="images/logo.svg" style="width: 9.5rem;" alt=""> </a>
+    <a class="navbar-brand d-sm-none" href="#"><img src="images/icon.svg" alt="" style="width: 5rem;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon border-0"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  flex-wrap bd-navbar-nav p-2 me-auto" >
+			
+		 <li class="nav-item text-center fw-bold">
+            <a class="nav-link active " aria-current="page" href="#Home">Home</a>
+          </li>
+		  
+          <li class="nav-item text-center fw-bold">
+            <a class="nav-link " href="#Services">Services</a>
+          </li>
+		  
+          <li class="nav-item text-center fw-bold">
+            <a class="nav-link " href="#About us">About us</a>
+          </li>
+
+		  <li class="nav-item text-center fw-bold">
+            <a class="nav-link " href="#FAQ">FAQ</a>
+          </li>
+		  <hr style="border: 0.5px solid black;">
+        </ul>
+    
+    <ul class="navbar-nav  flex-wrap bd-navbar-nav " style="margin-left:0">
+    <li class="nav-item p-2 mx-auto">
+		<div class="btn-group" role="group" aria-label="Basic outlined example">
+			<a role="button" class="btn btn-outline-dark fw-bold" style="border-top-left-radius:5rem;border-bottom-left-radius:5rem; padding: 8px 15px" href="register.html">Register</a>
+			<a role="button" class="btn btn-outline-dark fw-bold" style="border-top-right-radius:5rem;border-bottom-right-radius:5rem;padding: 8px 15px"  data-bs-toggle="modal" data-bs-target="#modalSignin">Login</a>
+		</div>
+    </li>
+
+	<li class="nav-item p-2">
+    <button type="button" class="btn btn-warning justify-content-center fw-bold"  data-bs-toggle="modal" data-bs-target="#exampleModal5" aria-labelledby="exampleModalLabel">COVID-19</button>
+    </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------Login modal----------------------------------------------------->
+
+<div class="modal fade modal-signin  py-5" tabindex="-1" role="dialog" aria-hidden="true" id="modalSignin">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content rounded-5 shadow" style="border-radius: 25px;">
+		<div class="modal-header p-5 pb-4 border-bottom-0">
+			
+		  <!-- <h5 class="modal-title">Modal title</h5> -->
+		  <h2 class="fw-bold mb-0">Sign in</h2>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+  
+		<div class="modal-body p-5 pt-0">
+		  <form class="" wtx-context="B12BC91E-5DEB-41F2-8235-8AE3239DAFF0">
+			<div class="form-floating mb-3 d-flex align-items-center">
+			  <input type="email" class="form-control rounded-4 " id="floatingInput" placeholder="name@example.com" minlength="2" maxlength="50" required>
+			  <label for="floatingInput">Email address</label>
+			</div>
+			<div class="form-floating mb-3 d-flex align-items-center">
+			  <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password" minlength="8" maxlength="20" required>
+			  <label for="floatingPassword">Password</label>
+			  <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Password must be at least 8 characters" style="margin-left: -50px; width: 35px;height: 35px; border-radius: 50%;">
+				<button class="btn btn-dark fw-bold" type="button" disabled style=" width: 35px;height: 35px; border-radius: 50%;">i</button>
+			  </span>
+			</div>
+			<button class="w-100 mb-2 btn btn-lg rounded-pill btn-primary fw-bold shadow-sm" disabled type="submit" id="signbtn">Sign in</button>
+			<a class="text-muted mr-auto" href="#">Forgotten your password?</a>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!--------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------COVID modal----------------------------------------------------------->
+
+  <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true" role="dialog">
+			  <div class="modal-dialog" >
+				<div class="modal-content border-0" style="border-radius: 25px;">
+				  <div class="modal-header border-0 text-center bg-warning" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+					<h5 class="modal-title fw-bold fs-2 py-3  mx-auto" id="exampleModalLabel">Latest COVID 19 statistics</h5>
+				  </div>
+				  <div class="modal-body">
+					<div class="APIContainer">
+					<div class="covidInput fw-bold fs-5 text-center">
+					 
+					  <input class="form-control rounded-pill" list="datalistOptions" id="countries" placeholder="Type to search for a country...">
+						<datalist id="datalistOptions">
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="Andorra">Andorra</option>
+							<option value="Angola">Angola</option>
+							<option value="Anguilla">Anguilla</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Armenia">Armenia</option>
+							<option value="Aruba">Aruba</option>
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Azerbaijan">Azerbaijan</option>
+							<option value="Bahamas">Bahamas</option>
+							<option value="Bahrain">Bahrain</option>
+							<option value="Bangladesh">Bangladesh</option>
+							<option value="Barbados">Barbados</option>
+							<option value="Belarus">Belarus</option>
+							<option value="Belgium">Belgium</option>
+							<option value="Belize">Belize</option>
+							<option value="Benin">Benin</option>
+							<option value="Bermuda">Bermuda</option>
+							<option value="Bhutan">Bhutan</option>
+							<option value="Bolivia">Bolivia</option>
+							<option value="Bonaire">Bonaire</option>
+							<option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+							<option value="Botswana">Botswana</option>
+							<option value="Brazil">Brazil</option>
+							<option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+							<option value="Brunei">Brunei</option>
+							<option value="Bulgaria">Bulgaria</option>
+							<option value="Burkina Faso">Burkina Faso</option>
+							<option value="Burundi">Burundi</option>
+							<option value="Cambodia">Cambodia</option>
+							<option value="Cameroon">Cameroon</option>
+							<option value="Canada">Canada</option>
+							<option value="Canary Islands">Canary Islands</option>
+							<option value="Cape Verde">Cape Verde</option>
+							<option value="Cayman Islands">Cayman Islands</option>
+							<option value="Central African Republic">Central African Republic</option>
+							<option value="Chad">Chad</option>
+							<option value="Channel Islands">Channel Islands</option>
+							<option value="Chile">Chile</option>
+							<option value="China">China</option>
+							<option value="Christmas Island">Christmas Island</option>
+							<option value="Cocos Island">Cocos Island</option>
+							<option value="Colombia">Colombia</option>
+							<option value="Comoros">Comoros</option>
+							<option value="Congo">Congo</option>
+							<option value="Cook Islands">Cook Islands</option>
+							<option value="Costa Rica">Costa Rica</option>
+							<option value="Cote DIvoire">Cote DIvoire</option>
+							<option value="Croatia">Croatia</option>
+							<option value="Cuba">Cuba</option>
+							<option value="Curaco">Curacao</option>
+							<option value="Cyprus">Cyprus</option>
+							<option value="Czech Republic">Czech Republic</option>
+							<option value="Denmark">Denmark</option>
+							<option value="Djibouti">Djibouti</option>
+							<option value="Dominica">Dominica</option>
+							<option value="Dominican Republic">Dominican Republic</option>
+							<option value="East Timor">East Timor</option>
+							<option value="Ecuador">Ecuador</option>
+							<option value="Egypt">Egypt</option>
+							<option value="El Salvador">El Salvador</option>
+							<option value="Equatorial Guinea">Equatorial Guinea</option>
+							<option value="Eritrea">Eritrea</option>
+							<option value="Estonia">Estonia</option>
+							<option value="Ethiopia">Ethiopia</option>
+							<option value="Falkland Islands">Falkland Islands</option>
+							<option value="Faroe Islands">Faroe Islands</option>
+							<option value="Fiji">Fiji</option>
+							<option value="Finland">Finland</option>
+							<option value="France">France</option>
+							<option value="French Guiana">French Guiana</option>
+							<option value="French Polynesia">French Polynesia</option>
+							<option value="French Southern Ter">French Southern Ter</option>
+							<option value="Gabon">Gabon</option>
+							<option value="Gambia">Gambia</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Germany">Germany</option>
+							<option value="Ghana">Ghana</option>
+							<option value="Gibraltar">Gibraltar</option>
+							<option value="Great Britain">Great Britain</option>
+							<option value="Greece">Greece</option>
+							<option value="Greenland">Greenland</option>
+							<option value="Grenada">Grenada</option>
+							<option value="Guadeloupe">Guadeloupe</option>
+							<option value="Guam">Guam</option>
+							<option value="Guatemala">Guatemala</option>
+							<option value="Guinea">Guinea</option>
+							<option value="Guyana">Guyana</option>
+							<option value="Haiti">Haiti</option>
+							<option value="Hawaii">Hawaii</option>
+							<option value="Honduras">Honduras</option>
+							<option value="Hong Kong">Hong Kong</option>
+							<option value="Hungary">Hungary</option>
+							<option value="Iceland">Iceland</option>
+							<option value="Indonesia">Indonesia</option>
+							<option value="India">India</option>
+							<option value="Iran">Iran</option>
+							<option value="Iraq">Iraq</option>
+							<option value="Ireland">Ireland</option>
+							<option value="Isle of Man">Isle of Man</option>
+							<option value="Israel">Israel</option>
+							<option value="Italy">Italy</option>
+							<option value="Jamaica">Jamaica</option>
+							<option value="Japan">Japan</option>
+							<option value="Jordan">Jordan</option>
+							<option value="Kazakhstan">Kazakhstan</option>
+							<option value="Kenya">Kenya</option>
+							<option value="Kiribati">Kiribati</option>
+							<option value="Korea North">Korea North</option>
+							<option value="Korea Sout">Korea South</option>
+							<option value="Kuwait">Kuwait</option>
+							<option value="Kyrgyzstan">Kyrgyzstan</option>
+							<option value="Laos">Laos</option>
+							<option value="Latvia">Latvia</option>
+							<option value="Lebanon">Lebanon</option>
+							<option value="Lesotho">Lesotho</option>
+							<option value="Liberia">Liberia</option>
+							<option value="Libya">Libya</option>
+							<option value="Liechtenstein">Liechtenstein</option>
+							<option value="Lithuania">Lithuania</option>
+							<option value="Luxembourg">Luxembourg</option>
+							<option value="Macau">Macau</option>
+							<option value="Macedonia">Macedonia</option>
+							<option value="Madagascar">Madagascar</option>
+							<option value="Malaysia">Malaysia</option>
+							<option value="Malawi">Malawi</option>
+							<option value="Maldives">Maldives</option>
+							<option value="Mali">Mali</option>
+							<option value="Malta">Malta</option>
+							<option value="Marshall Islands">Marshall Islands</option>
+							<option value="Martinique">Martinique</option>
+							<option value="Mauritania">Mauritania</option>
+							<option value="Mauritius">Mauritius</option>
+							<option value="Mayotte">Mayotte</option>
+							<option value="Mexico">Mexico</option>
+							<option value="Midway Islands">Midway Islands</option>
+							<option value="Moldova">Moldova</option>
+							<option value="Monaco">Monaco</option>
+							<option value="Mongolia">Mongolia</option>
+							<option value="Montserrat">Montserrat</option>
+							<option value="Morocco">Morocco</option>
+							<option value="Mozambique">Mozambique</option>
+							<option value="Myanmar">Myanmar</option>
+							<option value="Nambia">Nambia</option>
+							<option value="Nauru">Nauru</option>
+							<option value="Nepal">Nepal</option>
+							<option value="Netherland Antilles">Netherland Antilles</option>
+							<option value="Netherlands">Netherlands (Holland, Europe)</option>
+							<option value="Nevis">Nevis</option>
+							<option value="New Caledonia">New Caledonia</option>
+							<option value="New Zealand">New Zealand</option>
+							<option value="Nicaragua">Nicaragua</option>
+							<option value="Niger">Niger</option>
+							<option value="Nigeria">Nigeria</option>
+							<option value="Niue">Niue</option>
+							<option value="Norfolk Island">Norfolk Island</option>
+							<option value="Norway">Norway</option>
+							<option value="Oman">Oman</option>
+							<option value="Pakistan">Pakistan</option>
+							<option value="Palau Island">Palau Island</option>
+							<option value="Palestine">Palestine</option>
+							<option value="Panama">Panama</option>
+							<option value="Papua New Guinea">Papua New Guinea</option>
+							<option value="Paraguay">Paraguay</option>
+							<option value="Peru">Peru</option>
+							<option value="Phillipines">Philippines</option>
+							<option value="Pitcairn Island">Pitcairn Island</option>
+							<option value="Poland">Poland</option>
+							<option value="Portugal">Portugal</option>
+							<option value="Puerto Rico">Puerto Rico</option>
+							<option value="Qatar">Qatar</option>
+							<option value="Republic of Montenegro">Republic of Montenegro</option>
+							<option value="Republic of Serbia">Republic of Serbia</option>
+							<option value="Reunion">Reunion</option>
+							<option value="Romania">Romania</option>
+							<option value="Russia">Russia</option>
+							<option value="Rwanda">Rwanda</option>
+							<option value="St Barthelemy">St Barthelemy</option>
+							<option value="St Eustatius">St Eustatius</option>
+							<option value="St Helena">St Helena</option>
+							<option value="St Kitts-Nevis">St Kitts-Nevis</option>
+							<option value="St Lucia">St Lucia</option>
+							<option value="St Maarten">St Maarten</option>
+							<option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+							<option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+							<option value="Saipan">Saipan</option>
+							<option value="Samoa">Samoa</option>
+							<option value="Samoa American">Samoa American</option>
+							<option value="San Marino">San Marino</option>
+							<option value="Sao Tome & Principe">Sao Tome & Principe</option>
+							<option value="Saudi Arabia">Saudi Arabia</option>
+							<option value="Senegal">Senegal</option>
+							<option value="Seychelles">Seychelles</option>
+							<option value="Sierra Leone">Sierra Leone</option>
+							<option value="Singapore">Singapore</option>
+							<option value="Slovakia">Slovakia</option>
+							<option value="Slovenia">Slovenia</option>
+							<option value="Solomon Islands">Solomon Islands</option>
+							<option value="Somalia">Somalia</option>
+							<option value="South Africa">South Africa</option>
+							<option value="Spain">Spain</option>
+							<option value="Sri Lanka">Sri Lanka</option>
+							<option value="Sudan">Sudan</option>
+							<option value="Suriname">Suriname</option>
+							<option value="Swaziland">Swaziland</option>
+							<option value="Sweden">Sweden</option>
+							<option value="Switzerland">Switzerland</option>
+							<option value="Syria">Syria</option>
+							<option value="Tahiti">Tahiti</option>
+							<option value="Taiwan">Taiwan</option>
+							<option value="Tajikistan">Tajikistan</option>
+							<option value="Tanzania">Tanzania</option>
+							<option value="Thailand">Thailand</option>
+							<option value="Togo">Togo</option>
+							<option value="Tokelau">Tokelau</option>
+							<option value="Tonga">Tonga</option>
+							<option value="Trinidad & Tobago">Trinidad & Tobago</option>
+							<option value="Tunisia">Tunisia</option>
+							<option value="Turkey">Turkey</option>
+							<option value="Turkmenistan">Turkmenistan</option>
+							<option value="Turks & Caicos Is">Turks & Caicos Is</option>
+							<option value="Tuvalu">Tuvalu</option>
+							<option value="Uganda">Uganda</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Ukraine">Ukraine</option>
+							<option value="United Arab Erimates">United Arab Emirates</option>
+							<option value="United States of America">United States of America</option>
+							<option value="Uraguay">Uruguay</option>
+							<option value="Uzbekistan">Uzbekistan</option>
+							<option value="Vanuatu">Vanuatu</option>
+							<option value="Vatican City State">Vatican City State</option>
+							<option value="Venezuela">Venezuela</option>
+							<option value="Vietnam">Vietnam</option>
+							<option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+							<option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+							<option value="Wake Island">Wake Island</option>
+							<option value="Wallis & Futana Is">Wallis & Futana Is</option>
+							<option value="Yemen">Yemen</option>
+							<option value="Zaire">Zaire</option>
+							<option value="Zambia">Zambia</option>
+							<option value="Zimbabwe">Zimbabwe</option>
+						</datalist>
+					</div>
+					<hr class="mySeparator">
+					<div class="text-center fs-5 fw-bold">
+					  <p class="marginTopBottom" id="covidNewConfirmed">New confirmed cases: /</p>
+					  <p class="marginTopBottom" id="covidTotalConfirmed">Total confirmed cases: /</p>
+					  <p class="marginTopBottom" id="covidNewDeaths">New deaths: /</p>
+					  <p class="marginTopBottom" id="covidTotalDeaths">Total deaths: /</p>
+					  <p class="marginTopBottom" id="covidLastUpdate">Last updated: /</p>
+					</div>
+				  </div>
+				</div>
+				<p class="text-end me-3 text-muted lead fs-5">Powered by <a href="https://api-sports.io/documentation/covid-19/v1">api-sports</a> </p>
+				  <div class="modal-footer">
+					<button type="button" class="btn  fw-bold shadow-sm" data-bs-dismiss="modal" style=" border-radius: 25px; padding: 5px 15px; background-color: #ffc107;">Close</button>
+					
+				  </div>
+				</div>
+			  </div>
+			</div>
+ <!---------------------------------------------------------------------------------------------------------------->
+<!---------Cover section------------------------------------------------------------------------>
+
+<section id="Home" class="p-5 mt-5 d-flex align-items-center justify-content-center mx-auto" style="height: 100vh; max-width: 1400px;">
+<header class="masthead ">
+	<div class="row d-flex  ">
+		<div class="col-lg-6 col-md-12 col-sm-12 fw-bold mx-auto my-auto justify-content-center text-center text-xl-start">
+			<h1 class="display-3 fw-bold text-shadow" style="color: #00111B; text-shadow: 2px 2px 5px rgba(28, 12, 48, 0.171);">Digital era is just beginning</h1>
+			<button type="button" class="hero-btn btn fw-bold fs-3 mt-4 mx-auto text-white btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignin">Join us</button>
+		</div>
+		<div class="col-xl-6 my-auto d-xl-flex justify-content-end  d-none">
+			<img src="images/med.svg" alt=""  style="width:552px;height: 481px">
+		</div>
+	</div>
+<div class="mt-5">
+	<a type="button" href="#shs" id="down" style="color:rgba(8, 1, 17, 0.986)">
+	  <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-arrow-down-circle position-absolute bottom-0 start-50 translate-middle-x pb-2" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+	  </svg>
+	</a>
+</div>
+</header>
+</section>
+<!--------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------SHS introduction--------------------------------------------------------------------->
+
+<section id="shs" class="p-5  d-flex align-items-center justify-content-center mx-auto bg-white" style="box-shadow: 0px 4px 75px 22px rgba(0, 0, 0, 0.09);">
+   <header style="max-width: 1400px;">
+	 
+	<img src="images/logo.svg" class="d-block mx-auto w-50 mt-3 " alt="" style="min-width: 17.5rem; margin-bottom: 3rem;">
+   </div>
+   	   <p class="my-4 fs-5" >Sed fermentum urna id mauris vehicula, sed finibus purus blandit. Duis luctus tempus lacinia. Nunc non magna felis. Donec malesuada ut ex pharetra congue. Nunc pretium malesuada nisl, vel ornare nulla volutpat non. Suspendisse viverra sagittis felis a placerat. Integer varius, nunc ut venenatis congue, purus ex tempor erat, nec efficitur risus ante nec eros. Nulla augue lectus, hendrerit vitae quam eget, venenatis imperdiet ante. In dictum ornare lectus non viverra. Pellentesque at mattis lorem. Mauris quis diam luctus, convallis leo non, viverra ipsum. Fusce ut elementum lectus. Pellentesque sed nibh eget libero ullamcorper dictum eu ac odio. Nam quis arcu et justo ultricies sodales nec nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+	</header>
+</section>
+
+<!------------------------------------------------------------------------------------------------------------------->
+  <!--Services section-->
+  
+
+    <section class="header p-5 mx-auto" id="Services" style="max-width: 1400px;">
+      <div>
+	    <h1 class=" display-3 text-center py-4 fw-bold" >Services</h1>
+      <!--<h6 class="lead">هنا نعرض لكم خدماتنا</h6>-->
+       </div>
+		<div class="row">
+
+		<div class="col-md-6  mx-auto my-3 ">
+			<div class="card card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: url('images/doc.jpg') ;border-radius: 25px; background-size: cover; background-blend-mode:soft-light;">
+				<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+					<h3 class="pb-2 border-bottom display-6 fw-bold">Doctors</h3>
+					<h5 class="pt-2 mt-1 mb-4 ">Our primary care providers have expertise in Family Medicine, Internal Medicine and Pediatric and Adolescent Medicine</h5>
+				<ul class="d-flex list-unstyled mt-auto">
+					<li class="me-auto">
+					<img src="images/icon.svg" class="w-25">
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6  mx-auto my-3 ">
+			<div class="card card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: url('images/patient.jpg') ;border-radius: 25px; background-size: cover; background-blend-mode:soft-light;">
+				<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+				<h3 class="pb-2 border-bottom display-6 fw-bold">Patients</h3>
+				<h5 class="pt-2 mt-1 mb-4 ">View your personal information, people you are authorized to access, and view who has access to your records</h5>
+				<ul class="d-flex list-unstyled mt-auto">
+					<li class="me-auto">
+						<img src="images/icon.svg" class="w-25">
+					</li>
+					
+				</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12  mx-auto my-3 ">
+			<div class="card card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: url('images/lab.jpg') ;border-radius: 25px; background-size: cover; background-blend-mode:soft-light;">
+				<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+					<h3 class="pb-2 border-bottom display-6 fw-bold">Laboratory</h3>
+					<h5 class="pt-2 mt-1 mb-4  ">View details of upcoming or completed laboratory, completed Pathology tests and radioligical reports</h5>
+				<ul class="d-flex list-unstyled mt-auto">
+					<li class="me-auto">
+						<img src="images/icon.svg" class="w-25">
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-12  mx-auto my-3 ">
+			<div class="card card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: url('images/appointment.jpg') ;border-radius: 25px; background-size: cover; background-blend-mode:soft-light;">
+				<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+					<h3 class="pb-2 border-bottom display-6 fw-bold">Appointments</h3>
+					<h5 class="pt-2 mt-1 mb-4  ">View your upcoming appointments, request to reschedule or cancel existing appointments</h5>
+				<ul class="d-flex list-unstyled mt-auto">
+					<li class="me-auto">
+						<img src="images/icon.svg" class="w-25">
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+    </section>
+<!---------------------------------------------------------------------------------------------------------------->
+    <!--About us section-->
+    <section id="About us" class="p-5  d-flex align-items-center justify-content-center mx-auto bg-white " style="box-shadow: 0px 4px 75px 22px rgba(0, 0, 0, 0.09);">
+	<div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="max-width: 1400px;">
+		<div class="col-10 col-sm-8 col-lg-5">
+		  <img src="images/about.svg" class="d-lg-block d-none mx-lg-auto img-fluid mx-auto justify-content-center w-75" alt="Bootstrap Themes"  loading="lazy">
+		</div>
+		<div class="col-lg-7">
+		  <h1 class="display-3 fw-bold lh-1 mb-4 text-lg-start text-center border-bottom pb-2 text-primary">About us</h1>
+		  <p class="lead">We are a group of students at the 4th year of Communication and Electronics Department at the Faculty of Engineering - Alexandria university. This website is our graduation project and it is about the concept of digital transformation in medical field.</p>
+          
+          <p class="lead">Our aim is to improve the level of healthcare either for patients or for healthcare givers under the concept of UX (user experience) optimisation.</p>
+          
+          <p class="lead">As a long-term vision, we want to create the missing link among all people in the medical field. We want to connect all health associations in Egypt to introduce the optimal experience for patientsand healthcare givers.</p>
+          
+          <p class="lead">We know that it's a big dream, but the generous care from the country towards the digitalization is our greatest motivator.</p>
+		</div>
+	  </div>
+	</section>
+	<!--
+	  <section id="shs" class="p-5  d-flex align-items-center justify-content-center mx-auto bg-white" style="max-width: 1400px;box-shadow: 0px 4px 75px 22px rgba(0, 0, 0, 0.09);">
+	  <div class="card shadow-lg" style="border-radius: 25px;">
+		<div class="card-header py-4 " style="border-top-right-radius: 25px; border-top-left-radius: 25px;">
+			<h1 class="fw-bold  display-5 ">About us</h1>
+		</div>
+		<div class="card-body rounded">
+		  <h4 class="card-title mb-3 display-6">Digital transformation of hospital management system</h4>
+          <p class="lead">We are a group of students at the 4th year of Communication and Electronics Department at the Faculty of Engineering - Alexandria university. This website is our graduation project and it is about the concept of digital transformation in medical field.</p>
+          
+          <p class="lead">Our aim is to improve the level of healthcare either for patients or for healthcare givers under the concept of UX (user experience) optimisation.</p>
+          
+          <p class="lead">As a long-term vision, we want to create the missing link among all people in the medical field. We want to connect all health associations in Egypt to introduce the optimal experience for patientsand healthcare givers.</p>
+          
+          <p class="lead">We know that it's a big dream, but the generous care from the country towards the digitalization is our greatest motivator.</p>
+		</div>
+		
+	  </div>
+	</section>
+	-->
+	  <section class="header p-5 mx-auto" id="FAQ" style="max-width: 1400px;">
+		<h1 class="fw-bold  display-3 py-4 text-center" >FAQ</h1>
+		<div class="accordion shadow rounded-5" id="accordionPanelsStayOpenExample" style="border-radius: 25px !important;">
+			<div class="accordion-item">
+			  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+				<button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+				  Why SHS?
+				</button>
+			  </h2>
+			  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+				<div class="accordion-body">
+				  Smart Hospital System is an idea that targets local hospitals in Egypt. Our objective is to facilitate the life cycle
+				  of mangement system in our hospitals and achieve the best user experience for all people while using SHS. Because, 
+				  when the doctors, patients, nurses, and all workers in the healthcare system find this customised experience, their life
+				  would be much better.
+				</div>
+			  </div>
+			</div>
+			<div class="accordion-item">
+			  <h2 class="accordion-header " id="panelsStayOpen-headingTwo">
+				<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+				  Is SHS suitable for usage on smartphones?
+				</button>
+			  </h2>
+			  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+				<div class="accordion-body">
+					SHS is a web application at its first version. We tried to make it mobile friendly as much as we could but,
+					you may notice some glitches in styles specificaly while viewing tables in your profiles. It won't ruin the 
+					user experience but to achieve the best user experience; <strong>we recommend to use SHS on desktops 
+					or tablets. </strong>
+				</div>
+			  </div>
+			</div>
+			<div class="accordion-item">
+			  <h2 class="accordion-header " id="panelsStayOpen-headingThree">
+				<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+				  Would be there a mobile application for SHS?
+				</button>
+			  </h2>
+			  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+				<div class="accordion-body">
+					Unfortunately, we can't promise you with a mobile application in near future. But, we will consider it in 
+					the coming versions of SHS. Stay tuned!
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  </section>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--------------Footer section--------------------------------------------------------------------------->    
+  <!-- footer start -->
+    <!-- Footer -->
+	<footer class="text-center text-lg-start " style="background: rgb(253, 253, 253); color:#00111B">
+		<!-- Section: Links  -->
+		<section class="">
+		  <div class="container text-center text-md-start mt-3 p-3">
+			<!-- Grid row -->
+			<div class="row mt-4">
+			  <!-- Grid column -->
+			  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+				<!-- Content -->
+				<img src="images/logo.svg" alt="" class="w-100 my-auto" style="max-width: 17rem;">
+				
+			  </div>
+			  
+			  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2" >
+				<!-- Links -->
+				<h6 class="text-uppercase fw-bold mb-3 pb-2 border-bottom">
+				  Site map
+				</h6>
+				<p>
+				  <a href="index.html" class="text-reset" style="text-decoration:none;">Home</a>
+				</p>
+				<p>
+				  <a href="index.html" class="text-reset" style="text-decoration:none;">Services</a>
+				</p>
+				<p>
+				  <a href="index.html" class="text-reset" style="text-decoration:none;">About us</a>
+				</p>
+				
+			  </div>
+		 
+			  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+				<!-- Links -->
+				<h6 class="text-uppercase fw-bold mb-3 pb-2 border-bottom">
+				  Useful links
+				</h6>
+				<p>
+				  <a data-bs-toggle="modal" data-bs-target="#modalSignin" class="text-reset" style="text-decoration:none; cursor: pointer;">Login</a>
+				</p>
+				<p>
+				  <a href="register.html" class="text-reset" style="text-decoration:none;">Register</a>
+				</p>
+			  </div>
+			 
+			</div>
+		   
+		  </div>
+		</section>
+		<!-- Copyright -->
+		<div class="text-center  p-4" style="background-color: rgba(0, 0, 0, 0.04) !important;">
+		&copy 
+		  <script> 
+		  const Year = new Date().getFullYear()
+		  document.write(Year)
+		</script> 
+		Copyright:
+		  <span class="text-reset fw-bold">SHS team</span>
+		</div>
+		<!-- Copyright -->
+	  </footer>
+<!-- Footer -->
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="js/COVID.js" type="module"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+all_doctors = {
+"cardio" : [
+        {
+            "doctor_speciality": "Cardiology",
+            "doctor_name": "Dr. Ahmed Fathy",
+            "doctor_experience": "8 years experience",
+            "doctor_date": "Saturday, Monday and Wednsdayy",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Cardiology",
+            "doctor_name": "Dr. Mona Ali",
+            "doctor_experience": "12 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Cardiology",
+            "doctor_name": "Dr. Sayed Adel",
+            "doctor_experience": "5 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+        {
+            "doctor_speciality": "Cardiology",
+            "doctor_name": "Dr. Fouad Sedky",
+            "doctor_experience": "18 years experience",
+            "doctor_date": "Saturday, Monday and Wednsday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+    ],
+
+"dentist": [
+        {
+            "doctor_speciality": "Dentistry",
+            "doctor_name": "Dr. Mamdouh Lotfy",
+            "doctor_experience": "5 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Dentistry",
+            "doctor_name": "Dr. Sara Farid",
+            "doctor_experience": "3 years experience",
+            "doctor_date": "Saturday, Monday and Wednsday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+        {
+            "doctor_speciality": "Dentistry",
+            "doctor_name": "Dr. Sayed Adel",
+            "doctor_experience": "4 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Dentistry",
+            "doctor_name": "Dr. Ahmed Kasem",
+            "doctor_experience": "2 years experience",
+            "doctor_date": "Saturday, Monday and Wednsday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+        {
+            "doctor_speciality": "Dentistry",
+            "doctor_name": "Dr. Rady Kasem",
+            "doctor_experience": "3 years experience",
+            "doctor_date": "Saturday, Monday and Wednsday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+    ],
+
+"derma": [
+        {
+            "doctor_speciality": "Dermatology",
+            "doctor_name": "Dr. Reda Mojahed",
+            "doctor_experience": "10 years experience",
+            "doctor_date": "Saturday, Monday and Wednsdayy",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Dermatology",
+            "doctor_name": "Dr. Huda Sameer",
+            "doctor_experience": "9 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Dermatology",
+            "doctor_name": "Dr. Peter Saad",
+            "doctor_experience": "6 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+    ],
+
+"ortho": [
+        {
+            "doctor_speciality": "Orthopaedics",
+            "doctor_name": "Dr. Maged Mohamed",
+            "doctor_experience": "10 years experience",
+            "doctor_date": "Saturday, Monday and Wednsdayy",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Orthopaedics",
+            "doctor_name": "Dr. Wael Sameer",
+            "doctor_experience": "9 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Orthopaedics",
+            "doctor_name": "Dr. Sameer Saad",
+            "doctor_experience": "6 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+    ],
+
+"resp": [
+        {
+            "doctor_speciality": "Respiratory",
+            "doctor_name": "Dr. Hamdy Najeeb",
+            "doctor_experience": "10 years experience",
+            "doctor_date": "Saturday, Monday and Wednsdayy",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Respiratory",
+            "doctor_name": "Dr. Amr Nabil",
+            "doctor_experience": "9 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+    ],
+
+"endo": [
+        {
+            "doctor_speciality": "Endocrinology",
+            "doctor_name": "Dr. Mahmoud Najdy",
+            "doctor_experience": "10 years experience",
+            "doctor_date": "Saturday, Monday and Wednsdayy",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Endocrinology",
+            "doctor_name": "Dr. Sayeda Elsawy",
+            "doctor_experience": "8 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "9 AM - 1 PM"
+        },
+        {
+            "doctor_speciality": "Endocrinology",
+            "doctor_name": "Dr. Morad Ibraheem",
+            "doctor_experience": "13 years experience",
+            "doctor_date": "Sunday, Tuesday and Thursday",
+            "doctor_time": "1 PM - 5 PM"
+        },
+    ]
+};

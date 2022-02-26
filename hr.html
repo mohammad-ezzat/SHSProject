@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resources Dashboard</title>
+    <link rel="icon" 
+    type="image/svg" 
+    href="images/icon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat" >
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e5dfa58321.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </head>
+<body style="background-color: #f2f7fd;">
+
+<div class="container-fluid ps-0">
+    <div class="nav d-none d-lg-flex flex-column nav-pills  justify-content-start bg-white h-100 p-3 ms-0 border-end shadow-sm position-fixed" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="width: 220px;">
+        <a class="navbar-brand d-none d-sm-block mt-1 mx-auto" href="#"  ><img src="images/logo.svg" style="width: 9.5rem;" alt=""> </a>
+          <hr>
+       <button class="nav-link active show me-auto  link-dark d-flex mb-3 fw-bold  rounded-pill" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" style="padding-right: 87px;"><i class="bi bi-person-circle me-3" width="16" height="16"></i>Home</button>
+      <hr class=" mt-auto">
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/profile-image.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>Mohammad</strong>    <!--Displayed User name must be changed according to the registered account user name-->
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" >
+                <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                <li><a class="dropdown-item" href="editProfile.html">Update profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+              </ul>
+            
+          </div>
+    </div>
+
+    <div class="nav d-lg-none d-flex flex-column nav-pills p-3 bg-white h-100 border-end shadow-sm position-fixed" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="max-width: 5rem;">
+      <a class="navbar-brand d-lg-none me-auto mb-3" href="#"><img src="images/icon.svg" alt="" style="width: 3rem;"></a>
+      
+      <button class="nav-link active me-auto  link-dark d-flex mb-2 fw-bold " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" ><i class="bi bi-person-circle fs-4" width="16" height="16"></i></button>
+            
+          <div class="dropdown mt-auto ">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="images/profile-image.png" alt="" width="24" height="24" class="rounded-circle me-2">
+                 <!--Displayed User name must be changed according to the registered account user name-->
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" >
+              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              <li><a class="dropdown-item" href="editProfile.html">Update profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <!----Content--------------------------------------------------------------------------->
+    
+    <div class="maincontent">
+      <div class="tab-content" id="v-pills-tabContent" >
+      
+        <div class="tab-pane fade active show p-2 " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" >
+          <div class="container-fluid" > 
+            <div class="row">
+              <div class="col-12 me-auto mt-3" style="min-width: max-content;">
+                <div class="col-12 me-auto my-2 ms-3 d-flex align-items-center">
+                  <h4 class="fw-bold my-auto" ><i class="fa-solid fa-bars-progress me-3"></i>Human Resources Unit</h4>  <!--Displayed User name must be changed according to the registered account user name-->
+                </div>
+              </div>
+              <div class="col-12  me-auto" >
+                <div class="container bg-white p-4 shadow-sm m-3 border" style="border-radius: 25px; min-width: fit-content;">
+                  <div class="col d-flex align-items-center mb-3">
+                    <h5 class="fw-bold my-auto">Users</h5>
+                    <a class="btn btn-primary btn-sm rounded-pill fw-bold ms-auto px-3 " role="button"data-bs-toggle="modal" data-bs-target="#newUserModal">+ Add New</a>
+                  </div>
+                  
+                  
+                  <table class="table ">
+                    <thead>
+                      <tr class="bg-light " style="border-top:1px solid #dfdfdf; border-bottom:1px solid #dfdfdf !important">
+                        <th scope="col" class="text-muted ">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Speciality</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                        <th scope="row" class="text-muted ">1</th>
+                        <td>Mark</td>
+                        <td>Doctor</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff1"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff1" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted ">2</th>
+                        <td>Jacob</td>
+                        <td>Lab technician</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-warning p-1 rounded-pill badge text-dark">Offline</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff2"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff2" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted ">3</th>
+                        <td>Larry</td>
+                        <td>Patient</td>
+                        <td>--------</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff3"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff3" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted ">4</th>
+                        <td>Larry</td>
+                        <td>Lab technician</td>
+                        <td>-------</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff4"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff4" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted ">5</th>
+                        <td>Larry</td>
+                        <td>Lab technician</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-warning p-1 rounded-pill badge text-dark">Offline</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff5"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr>
+                        <tr > <!--------Staff Edit form------------------------>
+                          <td colspan="12" style="padding:0 !important">
+                            <div class=" collapse" id="staff5" >
+                              <form class="row g-3" autocomplete="off" method="post">
+                                <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                  <label for="user-name" class="col-form-label">Name</label>
+                                  <input type="text" class="form-control" id="user-name">
+                                </div>
+                                  <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                      <label class="col-form-label"> Role</label>
+                                      <input class="form-control" type="text" id="DrugNo">
+                                  </div>
+                                  <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                      <label class="col-form-label">Title</label>
+                                      <input class="form-control" type="text" id="DrugName">
+                                  </div>
+                                  <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                      <label class="col-form-label"> Active days</label>
+                                      <input class="form-control" type="text"  id="NoUnits">
+                                  </div>
+                                  <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                      <label class="col-form-label">Finance</label>
+                                      <input class="form-control" type="text" id="NoTimes">
+                                  </div>
+                                  <div  class="form-action-buttons">
+                                      <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                  </div>
+                              </form>
+                            </div>
+                          </td>
+                        </tr>
+                        <th scope="row" class="text-muted ">6</th>
+                        <td>Larry</td>
+                        <td>Patient</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff6"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff6" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted ">7</th>
+                        <td>Larry</td>
+                        <td>Doctor</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-warning p-1 rounded-pill badge text-dark">Offline</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff7"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff7" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+         
+                      <tr>
+                        <th scope="row" class="text-muted">8</th>
+                        <td>Larry</td>
+                        <td>Doctor</td>
+                        <td>Diabetes and Endocrinology</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff8"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff8" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">9</th>
+                        <td>Larry</td>
+                        <td>Doctor</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff9"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff9" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">10</th>
+                        <td>Larry</td>
+                        <td>Doctor</td>
+                        <td>Cardiology</td>
+                        <td><span class="bg-primary p-1 rounded-pill badge">Active</span></td>
+                        <td ><a href="" data-bs-toggle="collapse" class="link-dark" data-bs-target="#staff10"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                      </tr>
+                      <tr > <!--------Staff Edit form------------------------>
+                        <td colspan="12" style="padding:0 !important">
+                          <div class=" collapse" id="staff10" >
+                            <form class="row g-3" autocomplete="off" method="post">
+                              <div class="col-sm-12 col-md-6 col-lg-4  d-flex flex-column">
+                                <label for="user-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="user-name">
+                              </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column">
+                                    <label class="col-form-label"> Role</label>
+                                    <input class="form-control" type="text" id="DrugNo">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Title</label>
+                                    <input class="form-control" type="text" id="DrugName">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label"> Active days</label>
+                                    <input class="form-control" type="text"  id="NoUnits">
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 d-flex  flex-column">
+                                    <label class="col-form-label">Finance</label>
+                                    <input class="form-control" type="text" id="NoTimes">
+                                </div>
+                                <div  class="form-action-buttons">
+                                    <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mb-2" value="Save changes">
+                                </div>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <nav aria-label="patientPagination" id="patientPagination" class="pt-2">
+                    <ul class="pagination justify-content-center align-items-center">
+                      <li class="page-item disabled">
+                        <span class="page-link" style="border-radius: 25px;">Prev.</span>
+                      </li>
+                      <li><span class="px-3 py-auto text-muted">Page 1 of 3</span></li>
+                      <li class="page-item">
+                        <a class="page-link bg-outline-info " style="border-radius: 25px;" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              
+              </div>
+            </div>  
+          </div>  
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade " id="newUserModal" tabindex="-1" aria-labelledby="newUserModalLabel" aria-hidden="true" style="min-width: fit-content;">
+    <div class="modal-dialog  modal-dialog-centered " >
+      <div class="modal-content border-0 px-2" style="border-radius:25px">
+        <div class="modal-header" >
+          <h3 class="modal-title fw-bold" id="exampleModalLabel">New User Creation</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="employee-form">
+              <form class="row g-3" autocomplete="off" method="post">
+                <div class="d-flex align-items-center">
+                  <label for="user-name" class="col-form-label w-75"><b>Name</b></label>
+                  <input type="text" class="form-control" id="user-name">
+                </div>
+                  <div class="col-12 d-flex align-items-center">
+                      <label class="w-75"><b> Role</b></label><label class="validation-error hide" id="fullNameValidationError"></label>
+                      <input class="form-control" type="text" id="DrugNo">
+                  </div>
+                  <div class="col-12 d-flex  align-items-center">
+                      <label class="w-75"><b> Title</b></label>
+                      <input class="form-control" type="text" id="DrugName">
+                  </div>
+                  <div class="col-12 d-flex  align-items-center">
+                      <label class="w-75"><b> Active days</b></label>
+                      <input class="form-control" type="text"  id="NoUnits">
+                  </div>
+                  <div class="col-12 d-flex  align-items-center">
+                      <label class="w-75">Finance</label>
+                      <input class="form-control" type="text" id="NoTimes">
+                  </div>
+                  <div  class="form-action-buttons">
+                      <input type="submit" class="btn btn-primary rounded-pill fw-bold text-white w-100 mt-3" value="+ Add user">
+                  </div>
+              </form>
+            </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
