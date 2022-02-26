@@ -10,6 +10,9 @@ user experience but to achieve the best user experience; **we recommend to use S
 ```
 SHSProject/
 ├─ css/
+│  ├─ style.css
+│  ├─ appointment.css
+│  ├─ bootstrap.min.css
 ├─ js/
 │  ├─ appointment.js
 │  ├─ appointment.json
@@ -27,3 +30,4 @@ SHSProject/
 ├─ patientProfile.html
 ├─ register.html
 ├─ settings.html
+├─ README.md
