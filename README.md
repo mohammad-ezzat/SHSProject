@@ -7,6 +7,7 @@ user experience but to achieve the best user experience; **we recommend to use S
 
 #### Tree directory structure of SHSProject
 
+```
 SHSProject/
 ├─ css/
 ├─ js/
